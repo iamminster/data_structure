@@ -11,8 +11,38 @@ public class DoubleLinkedList {
 	}
 	
 	// pushFront O(1)
+	public void pushFront(Node node) {
+		if (length == 0) {
+			head = node;
+			tail = node;
+			++length;
+			return;
+		}
+		node.setNext(head);
+		head = node;
+		return;
+	}
+	
 	// topFront O(1)
+	public Object topFront() {
+		if (length == 0) {
+			return null;
+		}
+		return head.getKey();
+	}
+	
 	// popFront O(1)
+	public void popFront() {
+		if (length == 0) {
+			return;
+		}
+		if (length == 1) {
+			head = tail = null;
+			return;
+		}
+		head = head.getNext();
+		return;
+	}
 	// pushBack O(1)
 	// topBack O(1)
 	// popBack O(1)
