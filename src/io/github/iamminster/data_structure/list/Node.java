@@ -9,17 +9,19 @@ public class Node {
 	public Node() {
 		key = null;
 		next = null;
-		setPrevious(null);
+		previous = null;
 	}
 
 	public Node(Object key) {
 		setKey(key);
 		setNext(null);
+		setPrevious(null);
 	}
 	
 	public Node(Node node) {
 		setKey(node.getKey());
 		setNext(node.getNext());
+		setPrevious(node.getPrevious());
 	}
 
 	public Object getKey() {

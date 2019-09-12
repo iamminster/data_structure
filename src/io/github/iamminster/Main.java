@@ -1,12 +1,13 @@
 package io.github.iamminster;
 
-import io.github.iamminster.data_structure.list.SingleLinkedList;
+import io.github.iamminster.data_structure.list.DoubleLinkedList;
+import io.github.iamminster.data_structure.list.LinkedList;
 
 public class Main {
 
 	public static void main(String[] args) {
 		System.out.println("Test List");
-		SingleLinkedList myList = new SingleLinkedList();
+		LinkedList myList = new DoubleLinkedList();
 		myList.printList();
 		
 		myList.pushFront(1); // 1
@@ -18,10 +19,10 @@ public class Main {
 		myList.pushBack(2);  // 2 1 3 
 		myList.printList();
 		
-		println(myList.find(1));
-		println(myList.find(2));
-		println(myList.find(3));
-		println(myList.find(4));
+		println(myList.findIndex(1));
+		println(myList.findIndex(2));
+		println(myList.findIndex(3));
+		println(myList.findIndex(4));
 		println(myList.topFront());
 		println(myList.topBack());
 		

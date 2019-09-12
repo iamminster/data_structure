@@ -1,6 +1,6 @@
 package io.github.iamminster.data_structure.list;
 
-public class SingleLinkedList {
+public class SingleLinkedList implements LinkedList {
 
 	private Node head = null;
 	private int length = 0;
@@ -82,7 +82,7 @@ public class SingleLinkedList {
 	}
 
 	// O(n)
-	public int find(Object key) {
+	public int findIndex(Object key) {
 		if (head == null) {
 			return -1;
 		}
@@ -97,6 +97,23 @@ public class SingleLinkedList {
 		}
 		return -1;
 	}
+	
+	// O(n)
+		public Node find(Object key) {
+			if (head == null) {
+				return null;
+			}
+			Node pointer = head;
+			int index = 0;
+			while (pointer.getNext() != null) {
+				if (pointer.getKey().equals(key)) {
+					return pointer;
+				}
+				++index;
+				pointer = pointer.getNext();
+			}
+			return null;
+		}
 
 	// O(n)
 	public int erase(Object key) {
