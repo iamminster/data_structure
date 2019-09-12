@@ -1,13 +1,14 @@
 package io.github.iamminster;
 
 import io.github.iamminster.data_structure.list.DoubleLinkedList;
+import io.github.iamminster.data_structure.list.DoubleLinkedListWithTail;
 import io.github.iamminster.data_structure.list.LinkedList;
 
 public class Main {
 
 	public static void main(String[] args) {
 		System.out.println("Test List");
-		LinkedList myList = new DoubleLinkedList();
+		LinkedList myList = new DoubleLinkedListWithTail();
 		myList.printList();
 		
 		myList.pushFront(1); // 1
